@@ -1,0 +1,58 @@
+.wrapper
+
+  = render 'shared/side_bar'
+
+  .chat-main
+    .main-header
+      .current-group
+        .current-group__title
+          グループ名
+        %ul.current-group__members
+          Member：
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+      .right-header
+        .right-header__button
+          Edit
+    .messages
+      .message
+        .upper-info
+          .upper-info__user-name
+            メンバー
+          .upper-info__date
+            2019/05/18(Sat) 19:06:59
+        .message-text
+          .message-text__content
+            メッセージ
+      .message
+        .upper-info
+          .upper-info__user-name
+            メンバー
+          .upper-info__date
+            2019/05/18(Sat) 19:06:59
+        .message-text
+          .message-text__content
+            メッセージ
+      .message
+        .upper-info
+          .upper-info__user-name
+            メンバー
+          .upper-info__date
+            2019/05/18(Sat) 19:06:59
+        .message-text
+          .message-text__content
+            メッセージ
+    .form
+      %form
+        %input.form__message{placeholder: 'type a message'}
+        .form__mask
+          %label.form__mask__image
+            = fa_icon 'picture-o', class: 'icon'
+            %input.hidden{type: 'file'}
+        %input.form__submit{type: 'submit', value: 'Send'}
