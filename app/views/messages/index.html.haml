@@ -9,45 +9,13 @@
           グループ名
         %ul.current-group__members
           Member：
-          %li.member
-            メンバー名
-          %li.member
-            メンバー名
-          %li.member
-            メンバー名
-          %li.member
-            メンバー名
+          - @group.users.each do |user|
+            = user.name
       .right-header
         .right-header__button
           Edit
     .messages
-      .message
-        .upper-info
-          .upper-info__user-name
-            メンバー
-          .upper-info__date
-            2019/05/18(Sat) 19:06:59
-        .message-text
-          .message-text__content
-            メッセージ
-      .message
-        .upper-info
-          .upper-info__user-name
-            メンバー
-          .upper-info__date
-            2019/05/18(Sat) 19:06:59
-        .message-text
-          .message-text__content
-            メッセージ
-      .message
-        .upper-info
-          .upper-info__user-name
-            メンバー
-          .upper-info__date
-            2019/05/18(Sat) 19:06:59
-        .message-text
-          .message-text__content
-            メッセージ
+      = render @messages
     .form
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
