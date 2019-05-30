@@ -1,6 +1,6 @@
 ## chatspace
 
-## membersテーブル
+## group_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -11,7 +11,7 @@
 - belongs_to :group
 - belongs_to :user
 
-## userテーブル
+## usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -23,7 +23,7 @@
 - has_many :messages
 - has_many :members
 
-## groupテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -35,7 +35,7 @@
 - has_many :messages
 - has_many :members
 
-## messageテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
