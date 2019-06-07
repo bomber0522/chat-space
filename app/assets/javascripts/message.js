@@ -50,7 +50,6 @@ $(document).on('turbolinks:load', function (){
 
   var interval = setInterval(function() {
     if (location.href.match(/\/groups\/\d+\/messages/)){
-      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       var last_message_id = $('.message').last().data('id');
       var href = 'api/messages'
       $.ajax({
